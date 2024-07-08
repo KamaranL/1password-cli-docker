@@ -1,11 +1,13 @@
 FROM docker.io/library/alpine:3
 
 LABEL \
-    com.docker.image.license="MIT" \
-    com.docker.image.author.name="Kamaran Layne" \
-    com.docker.image.author.email="kamaranl@kamaranl.vip" \
-    com.docker.image.author.url="https://github.com/KamaranL" \
-    com.1password-cli.version="2.29.0"
+    org.label-schema.schema-version="1.0" \
+    org.label-schema.1password-cli.version="2.29.0" \
+    org.label-schema.description="1Password CLI built on alpine linux" \
+    org.label-schema.license="MIT" \
+    org.label-schema.maintainer="Kamaran Layne <kamaranl@kamaranl.vip>" \
+    org.label-schema.vcs-url="https://github.com/KamaranL" \
+    org.label-schema.vendor="kamaranl"
 
 RUN <<EOF
 echo https://downloads.1password.com/linux/alpinelinux/stable/ >> /etc/apk/repositories
